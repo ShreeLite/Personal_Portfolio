@@ -120,3 +120,19 @@ body {
   line-height: 1.6;
   color: #dcdcdc;
 }
+
+.jabalpur-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.jabalpur-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ff4a57;
+}
