@@ -51,7 +51,7 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
   padding: 80px;
-  background: #0c0c0c url('images/bg.jpg') no-repeat center/cover;
+  background: #0c0c0c url('src/images/bg.jpg') no-repeat center/cover;
 
 }
 
@@ -141,7 +141,7 @@ h1 span {
   align-items: stretch;
   padding: 80px;
   height: 100vh;
-  background: #0c0c0c url('images/bg.jpg') no-repeat center/cover;
+  background: #0c0c0c url('src/images/bg.jpg') no-repeat center/cover;
 }
 
 .image {
