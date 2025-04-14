@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Shreem</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="images/hero.jpg" alt="Profile Picture" class="profile-img" />
+      <h1 class="name">Shreem <span>©</span></h1>
+      <p class="role">Computer Science Student and Tech Enthusiast</p>
+      <p class="email">shreemcream@gmail.com</p>
+      <p class="location">Based in Hyderabad, India</p>
+      <div class="socials">
+        <a href="mailto:shreemcream@gmail.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail" /></a>
+        <a href="https://www.linkedin.com/in/shreem-shukla-816982337/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/shreeyuuummm/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" /></a>
+        <a href="https://github.com/ShreeLite"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" /></a>
+      </div>
+
+      <a href="https://www.linkedin.com/in/shreem-shukla-816982337/" target="_blank">
+        <button class="hire-btn">Connect With Me!</button>
+      </a>
+      <footer>©Made With Sleep Deprivation by @ShreeLite</footer>
+    </aside>
+
+    <main class="form-section">
+      <h2>Let’s Work <span class="highlight">Together!</span></h2>
+      <p class="email-inline">shreemcream@gmail.com</p>
+      <form id="contactForm" onsubmit="sendEmail(event)">
+        <label>Full Name *<input type="text" placeholder="Your Full Name" required></label>
+        <label>Email *<input type="email" placeholder="Your email address" required></label>
+        <label>Phone (optional)<input type="text" placeholder="Your number phone"></label>
+        
+       
+        <label>Message<textarea placeholder="Write your message here ..."></textarea></label>
+        <div class="buttons">
+          <button type="button" class="attach-btn">📎 Add an attachment</button>
+          <button type="submit" class="send-btn">Send Message</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- FontAwesome for icons (optional) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Script to handle form submission -->
+  <script>
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent form from reloading the page
+
+      const name = document.querySelector('input[placeholder="Your Full Name"]').value;
+      const email = document.querySelector('input[placeholder="Your email address"]').value;
+      const phone = document.querySelector('input[placeholder="Your number phone"]').value;
+      
+      
+      const message = document.querySelector('textarea').value;
+
+      // Email content
+      const mailtoLink = `mailto:shreemcream@gmail.com?subject=${encodeURIComponent(
+        "New Inquiry: " + subject
+      )}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nBudget: ${budget}\n\nMessage:\n${message}`
+      )}`;
+
+      // Redirect to mail app
+      window.location.href = mailtoLink;
+    }
+  </script>
+
+</body>
+</html>
