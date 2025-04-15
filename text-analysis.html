@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text Analyzer</title>
+  <script src="js/text-analyzer.js" defer></script>
+  <style>
+    body {
+  background-color: #0a0a0a;
+  background: #0c0c0c url('src/images/bg.jpg') no-repeat center/cover;
+  color: #ff4c60;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+textarea {
+  background-color: #1a1a1a;
+  color: #ff4c60;
+  border: 2px solid #ff4c60;
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ff4c60;
+  color: #0a0a0a;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4c60;
+}
+
+#output {
+  background-color: #1a1a1a;
+   background: #0c0c0c url('src/images/bg.jpg') no-repeat center/cover;
+  color: #ff4c60;
+  border: 2px solid #ff4c60;
+  padding: 20px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  max-width: 1000px;
+  font-size: 16px;
+  overflow-x: auto;
+}
+
+  </style>
+</head>
+<body>
+  <h2>Paste your text here (10,000+ words)</h2>
+  <textarea id="longText" rows="20" cols="100" placeholder="Paste your 10k+ words here..."></textarea>
+  <br><br>
+  <button onclick="analyzeText()">Analyze</button>
+  <pre id="output"></pre>
+</body>
+</html>
